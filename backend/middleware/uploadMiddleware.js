@@ -20,7 +20,7 @@ const uploadImageToGCS = (file) => {
     const blobStream = blob.createWriteStream({
       resumable: false,
       contentType: file.mimetype,
-      predefinedAcl: 'publicRead', // 👈 Makes file publicly accessible
+      //predefinedAcl: 'publicRead', // 👈 Makes file publicly accessible
     });
 
     blobStream.on('error', (err) => {
